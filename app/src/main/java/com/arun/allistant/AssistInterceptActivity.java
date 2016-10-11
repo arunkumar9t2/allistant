@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 
-import static com.arun.allistant.Constants.ACTION_LAUNCH_ASSISTANT;
+import static com.arun.allistant.shared.Constants.ACTION_LAUNCH_ASSISTANT;
 
 public class AssistInterceptActivity extends AppCompatActivity {
 

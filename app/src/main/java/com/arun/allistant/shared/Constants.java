@@ -1,4 +1,4 @@
-package com.arun.allistant;
+package com.arun.allistant.shared;
 
 /**
  * Created by Arun on 06/10/2016.

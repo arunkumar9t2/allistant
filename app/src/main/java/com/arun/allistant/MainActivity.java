@@ -4,11 +4,15 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+
+import com.arun.allistant.shared.Constants;
+import com.arun.allistant.shared.Util;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -49,7 +53,11 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.fab)
     public void onFabClick() {
-        LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(Constants.ACTION_LAUNCH_ASSISTANT));
+        if (Util.isAccessibilityServiceEnabled(this)) {
+            LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(Constants.ACTION_LAUNCH_ASSISTANT));
+        } else {
+            Snackbar.make(coordinatorLayout, R.string.accessibility_snack, Snackbar.LENGTH_SHORT).show();
+        }
     }
 
     @OnClick(R.id.accessibility_error_layout)
