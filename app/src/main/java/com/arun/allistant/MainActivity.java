@@ -6,8 +6,9 @@ import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
-import android.widget.RelativeLayout;
+import android.view.View;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -16,24 +17,48 @@ import butterknife.OnClick;
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.toolbar)
-    Toolbar mToolbar;
-    @BindView(R.id.content_main)
-    RelativeLayout mContentMain;
+    Toolbar toolbar;
     @BindView(R.id.fab)
-    FloatingActionButton mFab;
+    FloatingActionButton fab;
     @BindView(R.id.coordinator_layout)
-    CoordinatorLayout mCoordinatorLayout;
+    CoordinatorLayout coordinatorLayout;
+    @BindView(R.id.accessibility_error_layout)
+    CardView accessibilityErrorLayout;
+    @BindView(R.id.allo_error_layout)
+    CardView alloErrorLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        setSupportActionBar(mToolbar);
+        setSupportActionBar(toolbar);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (Util.isAccessibilityServiceEnabled(this)) {
+            accessibilityErrorLayout.setVisibility(View.GONE);
+        }
+
+        if (Util.isPackageInstalled(this, Constants.ALLO)) {
+            alloErrorLayout.setVisibility(View.GONE);
+        }
     }
 
     @OnClick(R.id.fab)
-    public void onClick() {
+    public void onFabClick() {
         LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(Constants.ACTION_LAUNCH_ASSISTANT));
+    }
+
+    @OnClick(R.id.accessibility_error_layout)
+    public void onAccessibilityErrorClick() {
+        startActivityForResult(new Intent(android.provider.Settings.ACTION_ACCESSIBILITY_SETTINGS), 0);
+    }
+
+    @OnClick(R.id.allo_error_layout)
+    public void onAlloErrorClicked() {
+        Util.openPlayStore(this, Constants.ALLO);
     }
 }

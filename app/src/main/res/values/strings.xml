@@ -3,4 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="accessibility_description">This service will be used by Allistant to launch Google Allo and automatically open Google Assistant conversation activity. The actions performed by this app can be inspected by viewing the source code of this application avaialable on GitHub.</string>
     <string name="voice_prompt">Say something...</string>
+    <string name="grant_accessibility_text">Accessibility service permission missing. Click here to grant it.</string>
+    <string name="allo_error_message">You do not have Allo installed. Click here to install Allo from Google Play Store.</string>
+    <string name="swipe_gesture_explanation">You can set Allistant as the Assist app to enable opening of Allo assistant on long press (6.0+) or swipe up of home button.</string>
 </resources>
