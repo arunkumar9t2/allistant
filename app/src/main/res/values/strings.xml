@@ -7,5 +7,6 @@
     <string name="allo_error_message">You do not have Allo installed. Click here to install Allo from Google Play Store.</string>
     <string name="swipe_gesture_explanation">You can set Allistant as the Assist app to enable opening of Allo assistant on long press (6.0+) or swipe up of home button.</string>
     <string name="shortcut_explanation">You can create a shortcut on home screen to directly open Allo assistant. \n\nYou can also trigger this shortcut from automation apps like Tasker.</string>
-    <string name="accessibility_snack">Please grant accessibility permission.</string>
+    <string name="accessibility_missing_error">Please grant accessibility permission. It is required to enable direct shortcut to Assistant.</string>
+    <string name="google_assistant">Google Assistant</string>
 </resources>

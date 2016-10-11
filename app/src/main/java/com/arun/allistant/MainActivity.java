@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         if (Util.isAccessibilityServiceEnabled(this)) {
             LocalBroadcastManager.getInstance(this).sendBroadcast(new Intent(Constants.ACTION_LAUNCH_ASSISTANT));
         } else {
-            Snackbar.make(coordinatorLayout, R.string.accessibility_snack, Snackbar.LENGTH_SHORT).show();
+            Snackbar.make(coordinatorLayout, R.string.accessibility_missing_error, Snackbar.LENGTH_SHORT).show();
         }
     }
 
