@@ -45,7 +45,7 @@
     <style name="CardTitleStyle">
         <item name="android:textSize">18sp</item>
         <item name="android:textColor">@android:color/black</item>
-        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:lineSpacingMultiplier">1.1</item>
     </style>
 
     <style name="CardTextStyle">

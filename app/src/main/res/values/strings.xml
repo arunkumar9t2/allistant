@@ -22,4 +22,6 @@
 
     <string name="accessibility_missing_error">Please grant the accessibility permission to enable a direct shortcut to the Assistant.</string>
 
+    <string name="menu_action_about">About</string>
+
 </resources>

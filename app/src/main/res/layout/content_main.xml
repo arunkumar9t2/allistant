@@ -34,10 +34,10 @@
                     android:id="@+id/allo_card_title"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    style="@style/CardTitleStyle"
-                    android:text="@string/allo_error_title"
                     android:layout_toLeftOf="@+id/allo_icon"
-                    android:layout_toStartOf="@+id/allo_icon"/>
+                    android:layout_toStartOf="@+id/allo_icon"
+                    style="@style/CardTitleStyle"
+                    android:text="@string/allo_error_title"/>
 
                 <ImageView
                     android:id="@id/allo_icon"
@@ -53,6 +53,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
+                    android:layout_toLeftOf="@+id/allo_icon"
+                    android:layout_toStartOf="@+id/allo_icon"
                     style="@style/CardTextStyle"
                     android:text="@string/allo_error_message"/>
             </RelativeLayout>
@@ -61,7 +63,7 @@
         <!-- Accessibility -->
         <android.support.v7.widget.CardView
             android:id="@+id/accessibility_error_layout"
-            android:layout_marginBottom="12dp"
+            android:layout_marginBottom="16dp"
             style="@style/CardStyle">
 
             <RelativeLayout
@@ -85,6 +87,8 @@
                     android:layout_height="48dp"
                     android:layout_alignParentRight="true"
                     android:layout_alignParentEnd="true"
+                    android:layout_toLeftOf="@+id/allo_icon"
+                    android:layout_toStartOf="@+id/allo_icon"
                     android:src="@mipmap/ic_settings"
                     android:contentDescription="@string/allo_error_icon_content_description"/>
 
@@ -92,6 +96,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/accessibility_card_title"
+                    android:layout_toLeftOf="@+id/allo_icon"
+                    android:layout_toStartOf="@+id/allo_icon"
                     android:layout_marginTop="6dp"
                     style="@style/CardTextStyle"
                     android:text="@string/accessibility_error_message"/>

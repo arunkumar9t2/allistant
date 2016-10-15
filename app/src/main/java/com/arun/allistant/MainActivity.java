@@ -2,14 +2,16 @@ package com.arun.allistant;
 
 import android.content.ComponentName;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.arun.allistant.shared.Constants;
@@ -47,6 +49,25 @@ public class MainActivity extends AppCompatActivity {
 
         if (Util.isPackageInstalled(this, Constants.ALLO)) {
             alloErrorLayout.setVisibility(View.GONE);
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_action_about:
+                final Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(Constants.ABOUT_URL));
+                startActivity(i);
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
         }
     }
 

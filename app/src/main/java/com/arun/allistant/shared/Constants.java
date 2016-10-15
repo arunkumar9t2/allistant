@@ -21,4 +21,6 @@ public class Constants {
 
     public static final String EXTRA_VOICE_MESSAGE = "EXTRA_VOICE_MESSAGE";
     public static final int REQUEST_CODE_VOICE = 1111;
+
+    public static final String ABOUT_URL = "https://github.com/arunkumar9t2/allistant";
 }
