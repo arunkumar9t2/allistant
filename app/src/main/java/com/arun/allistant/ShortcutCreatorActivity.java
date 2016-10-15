@@ -17,7 +17,7 @@ public class ShortcutCreatorActivity extends AppCompatActivity {
 
         final Intent resultIntent = new Intent();
         resultIntent.putExtra(Intent.EXTRA_SHORTCUT_INTENT, assistOpenIntent);
-        resultIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, "Google Assistant");
+        resultIntent.putExtra(Intent.EXTRA_SHORTCUT_NAME, getApplicationContext().getString(R.string.google_assistant));
         resultIntent.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, Intent.ShortcutIconResource.fromContext(this,
                 R.mipmap.ic_launcher));
         setResult(RESULT_OK, resultIntent);

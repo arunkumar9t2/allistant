@@ -1,5 +1,6 @@
 package com.arun.allistant;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.CoordinatorLayout;
@@ -22,8 +23,6 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.toolbar)
     Toolbar toolbar;
-    @BindView(R.id.fab)
-    FloatingActionButton fab;
     @BindView(R.id.coordinator_layout)
     CoordinatorLayout coordinatorLayout;
     @BindView(R.id.accessibility_error_layout)
@@ -68,5 +67,16 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.allo_error_layout)
     public void onAlloErrorClicked() {
         Util.openPlayStore(this, Constants.ALLO);
+    }
+
+    @OnClick(R.id.assist_app_layout)
+    public void onAssistAppLayoutClick() {
+        final Intent openIntent = new Intent(Intent.ACTION_MAIN);
+        openIntent.setComponent(new ComponentName("com.android.settings", "com.android.settings.Settings$ManageAssistActivity"));
+        openIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+
+        if (Util.isCallable(this, openIntent)) {
+            startActivity(openIntent);
+        }
     }
 }

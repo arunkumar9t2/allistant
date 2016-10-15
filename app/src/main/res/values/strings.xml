@@ -1,10 +1,25 @@
 <resources>
     <string name="app_name">Allistant</string>
-    <string name="accessibility_description">This service will be used by Allistant to launch Google Allo and automatically open Google Assistant conversation activity. The actions performed by this app can be inspected by viewing the source code of this application avaialable on GitHub.</string>
-    <string name="grant_accessibility_text">Accessibility service permission missing. Click here to grant it.</string>
-    <string name="allo_error_message">You do not have Allo installed. Click here to install Allo from Google Play Store.</string>
-    <string name="swipe_gesture_explanation">You can set Allistant as the Assist app to enable opening of Allo assistant on long press (6.0+) or swipe up of home button.</string>
-    <string name="shortcut_explanation">You can create a shortcut on home screen to directly open Allo assistant. \n\nYou can also trigger this shortcut from automation apps like Tasker.</string>
-    <string name="accessibility_missing_error">Please grant accessibility permission. It is required to enable direct shortcut to Assistant.</string>
+
+    <!-- Main UI cards -->
+    <string name="allo_error_title">Allo Required</string>
+    <string name="allo_error_message">Tap to download from the Play Store.</string>
+    <string name="allo_error_icon_content_description">Allo Icon</string>
+
+    <string name="accessibility_error_title">Accessibility Permission Required</string>
+    <string name="accessibility_error_message">Tap to open Settings.</string>
+
+    <string name="home_gesture_hint_title">Home Button Gesture</string>
+    <string name="home_gesture_hint_message">To open Allo on long-press (6.0+) or swipe-up of the home button, set Allistant as your Assist app in Settings.</string>
+
+    <string name="home_shortcut_hint_title">Home Screen Shortcut</string>
+    <string name="home_shortcut_hint_message">Add the Allistant shortcut widget to quickly open Google Assistant. \n\nThis shortcut can also be triggered by automation apps like Tasker.</string>
+
+    <!-- Misc -->
     <string name="google_assistant">Google Assistant</string>
+
+    <string name="accessibility_description">This service will be used by Allistant to launch Google Allo and automatically open the Google Assistant conversation activity. The actions performed by this app can be inspected by viewing the source code of this application avaialable on GitHub.</string>
+
+    <string name="accessibility_missing_error">Please grant the accessibility permission to enable a direct shortcut to the Assistant.</string>
+
 </resources>
