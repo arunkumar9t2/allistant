@@ -7,7 +7,7 @@
 
 Allistant uses an accessibility service to emulate clicks on screen to get you directly to Google Allo's Assistant screen. It can also replace Now on Tap with Assistant if you set Allistant as the assist app in settings.
 
-## DEMO
+## Demo
 
 [![Demo Video on YouTube](http://img.youtube.com/vi/XrmB9HQaORc/0.jpg)](https://www.youtube.com/watch?v=XrmB9HQaORc)
     
