@@ -1,12 +1,13 @@
 # Allistant
-**An app to launch Google Allo assistant activity using an accessibility service.**
+**An Android app (4.1+) to launch Google Allo's Assistant activity using an accessibility service.**
 
-
-<img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" align="left" width="200" hspace="10" vspace="10">
+* Set Allistant as your Assist app in Settings to open Google Assistant on home button long-press
+* Create a home screen shortcut to Google Assistant
+* Have automation apps like Tasker open Google Assistant
 
 Allistant uses an accessibility service to emulate clicks on screen to get you directly to Google Allo's Assistant screen. It can also replace Now on Tap with Assistant if you set Allistant as the assist app in settings.
 
 ## DEMO
-Usage is very simple. For demo have a look at this video.
-[![DEMO](http://img.youtube.com/vi/XrmB9HQaORc/0.jpg)](https://www.youtube.com/watch?v=XrmB9HQaORc)
+
+[![Demo Video on YouTube](http://img.youtube.com/vi/XrmB9HQaORc/0.jpg)](https://www.youtube.com/watch?v=XrmB9HQaORc)
     
