@@ -3,6 +3,7 @@ package com.arun.allistant.shared;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.net.Uri;
 import android.provider.Settings;
 import android.support.annotation.NonNull;
@@ -11,6 +12,8 @@ import android.text.TextUtils;
 
 import com.arun.allistant.AssistantOpenerService;
 import com.arun.allistant.BuildConfig;
+
+import java.util.List;
 
 /**
  * Created by Arun on 11/10/2016.
@@ -62,5 +65,10 @@ public class Util {
             }
         }
         return false;
+    }
+
+    public static boolean isCallable(Context context, Intent intent) {
+        final List<ResolveInfo> list = context.getPackageManager().queryIntentActivities(intent, PackageManager.MATCH_DEFAULT_ONLY);
+        return list.size() > 0;
     }
 }

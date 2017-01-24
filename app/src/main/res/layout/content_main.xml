@@ -1,94 +1,161 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+
+<android.support.v4.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_width="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.arun.allistant.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/accessibility_error_layout"
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clickable="true"
-        android:foreground="?attr/selectableItemBackground"
-        app:cardBackgroundColor="@color/error"
-        app:cardUseCompatPadding="true"
-        app:contentPadding="10dp">
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="left"
-            android:text="@string/grant_accessibility_text"
-            android:textColor="@android:color/white"
-            android:textSize="14sp"/>
-    </android.support.v7.widget.CardView>
+        <!-- Allo -->
+        <android.support.v7.widget.CardView
+            style="@style/CardStyle"
+            android:id="@+id/allo_error_layout"
+            android:layout_marginBottom="2dp">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/allo_error_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:foreground="?attr/selectableItemBackground"
-        app:cardBackgroundColor="@color/error"
-        app:cardUseCompatPadding="true"
-        app:contentPadding="10dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="left"
-            android:text="@string/allo_error_message"
-            android:textColor="@android:color/white"
-            android:textSize="14sp"/>
-    </android.support.v7.widget.CardView>
+                <TextView
+                    android:id="@+id/allo_card_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/allo_icon"
+                    android:layout_toStartOf="@+id/allo_icon"
+                    style="@style/CardTitleStyle"
+                    android:text="@string/allo_error_title"/>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:foreground="?attr/selectableItemBackground"
-        app:cardBackgroundColor="@android:color/white"
-        app:cardUseCompatPadding="true"
-        app:contentPadding="10dp">
+                <ImageView
+                    android:id="@id/allo_icon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:src="@mipmap/ic_allo"
+                    android:contentDescription="@string/allo_error_icon_content_description"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="left"
-            android:text="@string/swipe_gesture_explanation"
-            android:textColor="@android:color/black"
-            android:textSize="14sp"/>
-    </android.support.v7.widget.CardView>
+                <TextView
+                    android:layout_below="@id/allo_card_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_toLeftOf="@+id/allo_icon"
+                    android:layout_toStartOf="@+id/allo_icon"
+                    style="@style/CardTextStyle"
+                    android:text="@string/allo_error_message"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:foreground="?attr/selectableItemBackground"
-        app:cardBackgroundColor="@android:color/white"
-        app:cardUseCompatPadding="true"
-        app:contentPadding="10dp">
+        <!-- Accessibility -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/accessibility_error_layout"
+            android:layout_marginBottom="16dp"
+            style="@style/CardStyle">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="left"
-            android:text="@string/shortcut_explanation"
-            android:textColor="@android:color/black"
-            android:textSize="14sp"/>
-    </android.support.v7.widget.CardView>
-</LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/accessibility_card_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/allo_icon"
+                    android:layout_toStartOf="@+id/allo_icon"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginEnd="16dp"
+                    style="@style/CardTitleStyle"
+                    android:text="@string/accessibility_error_title"/>
+
+                <ImageView
+                    android:id="@id/allo_icon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toLeftOf="@+id/allo_icon"
+                    android:layout_toStartOf="@+id/allo_icon"
+                    android:src="@mipmap/ic_settings"
+                    android:contentDescription="@string/allo_error_icon_content_description"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/accessibility_card_title"
+                    android:layout_toLeftOf="@+id/allo_icon"
+                    android:layout_toStartOf="@+id/allo_icon"
+                    android:layout_marginTop="6dp"
+                    style="@style/CardTextStyle"
+                    android:text="@string/accessibility_error_message"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <!-- Home Button -->
+        <android.support.v7.widget.CardView
+            android:id="@+id/assist_app_layout"
+            style="@style/CardStyle"
+            android:layout_marginBottom="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/CardTitleStyle"
+                    android:text="@string/home_gesture_hint_title" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    style="@style/CardTextStyle"
+                    android:text="@string/home_gesture_hint_message"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+        <!-- Shortcut -->
+        <android.support.v7.widget.CardView
+            style="@style/CardStyle"
+            android:layout_marginBottom="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/CardTitleStyle"
+                    android:text="@string/home_shortcut_hint_title" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    style="@style/CardTextStyle"
+                    android:text="@string/home_shortcut_hint_message"/>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
+
